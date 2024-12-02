@@ -1,0 +1,334 @@
+:root {
+    --fg-main-color: #000;
+    --fg-second-color: #fff;
+    --bg-main-color: #000;
+    --bg-second-color: #fff;
+    --border-main-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', serif;
+}
+
+/* HEADER SECTION */
+
+header {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+header nav ul {
+    text-align: right;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 2.5rem;
+}
+
+header nav ul li a {
+    color: var(--fg-main-color, #000);
+    text-decoration: none;
+}
+
+header nav ul .inicio {
+    padding: 0 3.5333rem;
+}
+
+header nav div {
+    position: relative;
+    top: 1.7rem;
+    margin-left: 2.5rem;
+    width: 1rem;
+}
+
+header nav div a {
+    text-decoration: none;
+    color: var(--fg-main-color, #000);
+    font-size: 1.3rem;
+}
+
+/* BG SECTION */
+
+.bg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 51.5rem;
+    background-image: url('../img/bg-gif.gif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 1.5rem;
+}
+
+/* .bg::after {
+    content: "";
+    position: absolute;
+    top: 5rem;
+    left:0;
+    right:0;
+    bottom: 9%;
+    background-color: rgba(0, 0, 0, .4);
+} */
+
+.bg div {
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    color: var(--fg-main-color, #000);
+}
+
+.bg div h2 {
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+}
+
+
+/* INTRO SECTION */
+
+.intro {
+    display: flex;
+    padding: 3rem 8rem;
+}
+
+.intro article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    margin: 0 auto;
+    /* background-color: #FFF6EC; */
+    width: 72rem;
+    border-radius: 3rem;
+    border: .1rem solid var(--bg-main-color, #000);
+}
+
+.intro article div {
+    padding: 0 1rem;
+}
+
+.intro article .mini-intro {
+    margin-left: 1rem;
+}
+
+.intro article .mini-intro h2 {
+    font-size: 2rem;
+}
+
+.intro article .mini-intro p {
+    width: 30rem;
+    font-size: 1.15rem;
+}
+
+.intro article .mini-intro div {
+    display: flex;
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.intro article .mini-intro h2 {
+    margin-bottom: .8rem;
+}
+
+.intro article .mini-intro div {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.intro article .mini-intro div a {
+    padding: .7rem 5rem;
+    border-radius: .8rem;
+    background-color: var(--bg-main-color, #000);
+    color: var(--border-main-color, #fff);
+    text-decoration: none;
+    transition: filter 100ms linear 50ms;
+}
+
+.intro article .mini-intro div a:hover {
+    filter: drop-shadow(var(--bg-main-color) .3rem .3rem .3rem);
+    border: none;
+}
+
+.intro article .mini-intro div a:active {
+    position: relative; 
+    top: .2rem;
+}
+
+.intro article .img {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.intro article .img img {
+    width: 100%;
+    height: auto;
+    border-radius: 3rem;
+    filter: saturate(150%);
+}
+
+/* CATALOG SECTION */
+
+.catalog {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.catalog h2 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+.catalog article {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 4rem 0rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.catalog article .tshirt-card {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0;
+    cursor: pointer;
+    /* background-color: #FFF6EC; */
+    border-radius: 4rem;
+    border: .1rem solid var(--bg-main-color, #000);
+}
+
+.catalog article .tshirt-card a {
+    text-decoration: none;
+    color: var(--fg-main-color, #fff);
+}
+
+.catalog article .tshirt-card div {
+    width: 100%;
+    transition: transform 100ms linear 50ms;
+}
+
+.catalog article .tshirt-card div:hover {
+    transform: scale(102%);
+}
+
+.catalog article .tshirt-card div img{
+    border-radius: 3rem;
+    width: 60%;
+    height: auto;
+}
+
+.catalog article .tshirt-card .buy {
+    margin: 0 auto;
+    width: 8rem;
+}
+
+.catalog article .tshirt-card .buy a {
+    padding: 0 .3rem;
+    text-align: center;
+    transition: transform 100ms linear 50ms;
+}
+
+.catalog article .tshirt-card .buy:hover {
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+/* INFO SECTION */
+
+.info {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: var(--bg-main-color, #000);
+}
+
+.info article {
+    text-align: center;
+    color: var(--fg-second-color, #fff);
+    background-color: var(--bg-main-color, #000);
+}
+
+.info article h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.info article p {
+    margin: 0 auto;
+    width: 55%;
+    margin-bottom: 2rem;
+}
+
+.info article div i {
+    position: relative;
+    right: 1.5rem;
+    cursor: pointer;
+}
+
+.info article div input {
+    width: 18rem;
+    height: 2rem;
+    padding: 1rem;
+    background-color: var(--bg-main-color, #000);
+    border: none;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    color: var(--fg-second-color, #fff);
+}
+
+.info article div input::placeholder {
+    color: var(--fg-second-color, #fff);
+}
+
+.info article p a {
+    color: var(--fg-second-color, #fff);
+    text-decoration: none;
+}
+
+.info article a img {
+    border-radius: .5rem;
+    width: 10rem;
+    transition: transform 50ms linear 50ms;
+}
+
+.info article a img:hover {
+    transform: scale(125%);
+}
+
+.info article a img:active {
+    position: relative;
+    top: .5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+    border-top: darkgray solid .1rem;
+    width: 100%;
+    background-color: var(--bg-main-color, #fff);
+    padding: 1rem;
+}
+
+footer p {
+    color: var(--fg-second-color, #fff);
+}
+
+footer p a {
+    color: var(--fg-second-color, #fff);
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
