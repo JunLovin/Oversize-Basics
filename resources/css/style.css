@@ -552,6 +552,11 @@
     .info-mobile article a img {
         width: 50%;
         border-radius: 2rem;
+        transition: transform 100ms linear 50ms;
+    }
+
+    .info-mobile article a img:hover {
+        transform: scale(110%);
     }
 
     .info-mobile article p a {
