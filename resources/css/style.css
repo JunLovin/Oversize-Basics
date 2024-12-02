@@ -4,6 +4,7 @@
     --bg-main-color: #000;
     --bg-second-color: #fff;
     --border-main-color: #fff;
+    --fg-footer-color: #aaa;
 }
 
 * {
@@ -67,21 +68,11 @@ header nav div a {
     margin-bottom: 1.5rem;
 }
 
-/* .bg::after {
-    content: "";
-    position: absolute;
-    top: 5rem;
-    left:0;
-    right:0;
-    bottom: 9%;
-    background-color: rgba(0, 0, 0, .4);
-} */
-
 .bg div {
     width: 100%;
     text-align: center;
     z-index: 2;
-    color: var(--fg-main-color, #000);
+    color: var(--fg-second-color, #fff);
 }
 
 .bg div h2 {
@@ -145,7 +136,7 @@ header nav div a {
 
 .intro article .mini-intro div a {
     padding: .7rem 5rem;
-    border-radius: .8rem;
+    border-radius: 3rem;
     background-color: var(--bg-main-color, #000);
     color: var(--border-main-color, #fff);
     text-decoration: none;
@@ -180,7 +171,7 @@ header nav div a {
 
 .catalog {
     width: 100%;
-    padding: 2rem 0;
+    padding: 2rem 0 8rem 0;
 }
 
 .catalog h2 {
@@ -229,20 +220,35 @@ header nav div a {
     height: auto;
 }
 
-.catalog article .tshirt-card .buy {
-    margin: 0 auto;
-    width: 8rem;
-}
-
-.catalog article .tshirt-card .buy a {
-    padding: 0 .3rem;
+.catalog article .tshirt-card p a {
+    width: 100%;
     text-align: center;
-    transition: transform 100ms linear 50ms;
+    color: var(--fg-second-color, #fff);
+    padding: 0 .3rem;
 }
 
-.catalog article .tshirt-card .buy:hover {
-    font-size: 1.1rem;
+.catalog article .tshirt-card .buy-btn {
+    background-color: var(--bg-main-color, #000);
+    border-radius:  2rem;;
+    width: 10rem;
+    height: 2rem;
+    align-content: center;
+    margin: 0 auto;
+    transition: filter 100ms linear 50ms;
+    margin-top: .2rem;
+}
+
+.catalog article .tshirt-card .buy-btn a:hover {
     text-decoration: underline;
+}
+
+.catalog article .tshirt-card .buy-btn:hover {
+    filter: drop-shadow(var(--bg-main-color) .3rem .3rem .3rem)
+}
+
+.catalog article .tshirt-card .buy-btn:active {
+    position: relative;
+    top: .1rem;
 }
 
 /* INFO SECTION */
@@ -277,7 +283,7 @@ header nav div a {
 }
 
 .info article div input {
-    width: 18rem;
+    width: 20rem;
     height: 2rem;
     padding: 1rem;
     background-color: var(--bg-main-color, #000);
@@ -321,11 +327,11 @@ footer {
 }
 
 footer p {
-    color: var(--fg-second-color, #fff);
+    color: var(--fg-footer-color, #aaa);
 }
 
 footer p a {
-    color: var(--fg-second-color, #fff);
+    color: var(--fg-footer-color, #aaa);
     text-decoration: none;
 }
 
