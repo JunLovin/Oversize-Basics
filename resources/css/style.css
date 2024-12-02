@@ -14,39 +14,43 @@
     font-family: 'Poppins', serif;
 }
 
+.mobile {
+    display: none;
+}
+
 /* HEADER SECTION */
 
-header {
+.pc {
     width: 100%;
     margin-bottom: 1.5rem;
 }
 
-header nav ul {
+.pc nav ul {
     text-align: right;
 }
 
-header nav ul li {
+.pc nav ul li {
     display: inline-block;
     padding: 0 2.5rem;
 }
 
-header nav ul li a {
+.pc nav ul li a {
     color: var(--fg-main-color, #000);
     text-decoration: none;
 }
 
-header nav ul .inicio {
+.pc nav ul .inicio {
     padding: 0 3.5333rem;
 }
 
-header nav div {
+.pc nav div {
     position: relative;
     top: 1.7rem;
     margin-left: 2.5rem;
     width: 1rem;
 }
 
-header nav div a {
+.pc nav div a {
     text-decoration: none;
     color: var(--fg-main-color, #000);
     font-size: 1.3rem;
@@ -319,22 +323,258 @@ header nav div a {
 
 /* FOOTER SECTION */
 
-footer {
+.footer-pc {
     border-top: darkgray solid .1rem;
     width: 100%;
     background-color: var(--bg-main-color, #fff);
     padding: 1rem;
 }
 
-footer p {
+.footer-pc p {
     color: var(--fg-footer-color, #aaa);
 }
 
-footer p a {
+.footer-pc p a {
     color: var(--fg-footer-color, #aaa);
     text-decoration: none;
 }
 
-footer p a:hover {
+.footer-pc p a:hover {
     text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 480px) {
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block; 
+    }
+
+    /* HEADER MOBILE SECTION */
+
+    .header-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 3.5rem;
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+
+    .header-mobile nav {
+        display: inline-block;
+        position: relative;
+    }
+
+    .header-mobile div {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .header-mobile div a {
+        color: var(--fg-main-color, #000);
+        text-decoration: none;
+    }
+
+    .header-mobile nav ul {
+        text-align: center;
+        display: inline-block;
+    }
+    
+    .header-mobile nav ul li {
+        padding: 0 1rem;
+        display: inline-block;
+    }
+    
+    .header-mobile nav ul li a {
+        color: var(--fg-main-color, #000);
+        text-decoration: none;
+    }
+
+    /* BG MOBILE SECTION */
+
+    .bg-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 55rem;
+        background-image: url('../img/bg-gif.gif');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .bg-mobile div h2 {
+        color: var(--fg-second-color, #fff);
+        font-size: 2rem;
+    }
+
+    /* INTRO MOBILE SECTION */
+
+    .intro-mobile {
+        margin: 2rem 0;
+        padding: 0 2rem;
+    }
+    
+    .intro-mobile article div {
+        margin: 2rem 0;
+    }
+    
+    .intro-mobile article div a {
+        background-color: var(--bg-main-color, #000);
+        color: var(--fg-second-color, #fff);
+        border-radius: 2rem;
+        padding: 1rem 3rem;
+        text-decoration: none;
+        transition: filter 100ms linear 50ms;
+    }
+
+    .intro-mobile article div a:hover {
+        filter: drop-shadow(var(--bg-main-color, #000) .3rem .3rem .3rem);
+    }
+
+    .intro-mobile article img {
+        margin-top: 1rem;
+        width: 100%;
+        border-radius: 3rem;
+    }
+
+    /* CATALOG MOBILE SECTION */
+
+    .catalog-mobile {
+        width: 100%;
+        margin: 2rem 0;
+        padding: 0 2rem;
+    }
+
+    .catalog-mobile h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .catalog-mobile article .tshirt-mobile-card {
+        width: 100%;
+        margin: 4rem 0;
+        text-align: center;
+        transition: transform 100ms linear 50ms;
+    }
+
+    .catalog-mobile article .tshirt-mobile-card:hover {
+        transform: scale(102%);
+    }
+
+    .catalog-mobile article .tshirt-mobile-card img {
+        width: 100%;
+        border-radius: 2rem;
+    }
+
+    .catalog-mobile article .tshirt-mobile-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn {
+        margin: 0 auto;
+        background-color: var(--bg-main-color, #000);
+        border-radius: 2rem;
+        color: var(--fg-second-color, #fff);
+        width: 12rem;
+        height: 2.5rem;
+        align-content: center;
+    }
+
+    .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn:hover {
+        filter: drop-shadow(var(--bg-main-color, #000) .3rem .3rem .3rem)
+    }
+
+    .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn:active {
+        position: relative;
+        top: .1rem;
+    }
+
+    .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn a {
+        color: var(--fg-second-color, #fff);
+        text-decoration: none;
+        padding: 0 .5rem;
+    }
+
+    .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn a:hover {
+        text-decoration: underline;
+    }
+
+    /* INFO MOBILE SECTION */
+
+    .info-mobile {
+        width: 100%;
+        padding: 0 2rem;
+        background-color: var(--bg-main-color, #000);
+        color: var(--fg-second-color, #fff);
+    }
+
+    .info-mobile article {
+        padding: 3rem 0;
+        text-align: center;
+    }
+
+    .info-mobile article h2 {
+        margin: 1rem 0;
+    }
+
+    .info-mobile article p {
+        margin: 1rem 0;
+    }
+
+    .info-mobile div input {
+        background-color: var(--bg-main-color, #000);
+        color: var(--fg-second-color, #fff);
+        border: none;
+        width: 70%;
+        height: 2rem;
+        border-radius: 2rem;
+        margin: 1rem 0;
+    }
+
+    .info-mobile div input::placeholder {
+        color: var(--fg-second-color, #fff);
+    }
+
+    .info-mobile div i {
+        position: relative;
+        right: 1.2rem;
+        top: .1rem;
+    }
+
+    .info-mobile article a img {
+        width: 50%;
+        border-radius: 2rem;
+    }
+
+    .info-mobile article p a {
+        color: var(--fg-second-color, #fff);
+        text-decoration: none;
+    }
+
+    /* FOOTER MOBILE SECTION */
+
+    .footer-mobile {
+        border-top: .1rem solid var(--border-main-color);
+        padding: 1rem;
+        width: 100%;
+        background-color: var(--bg-main-color, #000);
+    }
+    
+    .footer-mobile p {
+        color: var(--fg-footer-color, #aaa);
+        font-size: .8rem;
+    }
+
+    .footer-mobile p a {
+        color: var(--fg-footer-color, #aaa);
+        text-decoration: none;
+    }
 }
