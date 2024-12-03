@@ -1,5 +1,242 @@
+:root {
+    --fg-main-color: #000;
+    --fg-second-color: #fff;
+    --bg-main-color: #000;
+    --bg-second-color: #fff;
+    --border-main-color: #fff;
+    --fg-footer-color: #aaa;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', serif;
+}
+
+/* HEADER SECTION */
+
+.pc {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.pc nav ul {
+    text-align: right;
+}
+
+.pc nav ul li {
+    display: inline-block;
+    padding: 0 2.5rem;
+}
+
+.pc nav ul li a {
+    color: var(--fg-main-color, #000);
+    text-decoration: none;
+}
+
+.pc nav ul .inicio {
+    padding: 0 3.5333rem;
+}
+
+.pc nav div {
+    position: relative;
+    top: 1.7rem;
+    margin-left: 2.5rem;
+    width: 1rem;
+}
+
+.pc nav div a {
+    text-decoration: none;
+    color: var(--fg-main-color, #000);
+    font-size: 1.3rem;
+}
+
+/* CONTAINER SECTION */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 58rem;
+    background-image: url('../img/shirts-web/beige-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 80%;
+    background-color: var(--bg-second-color, #fff);
+    border-radius: 2rem;
+}
+
+.container article .beige-shirt {
+    padding: 3rem 0 3rem 2rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container article .beige-shirt img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+.container article .text {
+    margin: 0 2rem;
+}
+
+.container article .text h2, p, a {
+    line-height: 1.5;
+}
+
+.container article .text h2 {
+    font-size: 2.3rem;
+    margin-bottom: .8rem;
+}
+
+.container article .text h4 {
+    margin-bottom: .8rem;
+    font-size: 1.5rem;
+}
+
+.container article .text p {
+    width: 80%;
+    font-size: 1.1rem;
+}
+
+.container article .buy-it {
+    margin-top: 4rem;
+    margin-bottom: 7rem;
+}
+
+.container article .buy-it a {
+    padding: 1rem 5rem;
+    border-radius: 2rem;
+    color: var(--fg-second-color, #fff);
+    text-decoration: none;
+    background-color: var(--bg-main-color, #000);
+    transition: filter 100ms linear 50ms;
+}
+
+.container article .buy-it a:hover {
+    filter: drop-shadow(var(--bg-main-color, #000) .3rem .3rem .3rem);
+}
+
+.container article .buy-it a:active {
+    position: relative;
+    top: .2rem;
+}
+
+.container article .buy-it i {
+    margin: 0 .3rem;
+}
+
+/* MORE SHIRTS SECTION */
+
+.more-shirts {
+    margin: 4rem 0;
+    width: 100%;
+}
+
+.more-shirts .text-more-shirts {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.more-shirts article {
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 2rem;
+    align-items: start;
+    justify-content: center;
+}
+
+.more-shirts article .tshirt-card h2, p, a {
+    margin: .3rem 0;
+}
+
+.more-shirts article .tshirt-card {
+    width: 100%;
+    text-align: center;
+}
+
+.more-shirts article .tshirt-card div img {
+    border-radius: 2rem;
+    width: 100%;
+}
+
+.more-shirts article .tshirt-card div a img {
+    transition: transform 100ms linear 50ms;
+}
+
+.more-shirts article .tshirt-card div a img:hover {
+    transform: scale(103%);
+}
+
+.more-shirts article .tshirt-card h2 {
+    margin: 0 auto;
+    font-size: .8rem;
+    width: 50%;
+}
+
+.more-shirts article .tshirt-card p {
+    margin-bottom: .8rem;
+}
+
+.more-shirts article .tshirt-card .cart-btn {
+    background-color: var(--bg-main-color, #000);
+    color: var(--fg-second-color, #fff);
+    text-decoration: none;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    transition: filter 100ms linear 50ms;
+}
+
+.more-shirts article .tshirt-card .cart-btn:hover {
+    filter: drop-shadow(var(--bg-main-color, #000) .3rem .3rem .3rem);
+}
+
+.more-shirts article .tshirt-card .cart-btn:active {
+    position: relative;
+    top: .2rem;
+}
+
+/* FOOTER SECTION */
+
+.footer-pc {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    background-color: var(--bg-main-color, #000);
+    width: 100%;
+    height: 3rem;
+    color: var(--fg-footer-color, #aaa);
+}
+
+.footer-pc p {
+    margin-left: .8rem;
+    font-size: .8rem;
+}
+
+.footer-pc a {
+    color: var(--fg-footer-color, #aaa);
+    text-decoration: none;
+}
+
+.footer-pc a:hover {
+    text-decoration: underline;
 }
