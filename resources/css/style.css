@@ -259,6 +259,7 @@
 
 .info {
     width: 100%;
+    margin: 0;
     padding: 4rem 0;
     background-color: var(--bg-main-color, #000);
 }
@@ -328,6 +329,7 @@
     width: 100%;
     background-color: var(--bg-main-color, #fff);
     padding: 1rem;
+    margin: 0;
 }
 
 .footer-pc p {
@@ -481,9 +483,9 @@
     .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn {
         margin: 0 auto;
         background-color: var(--bg-main-color, #000);
-        border-radius: 2rem;
+        border-radius: 120rem;
         color: var(--fg-second-color, #fff);
-        width: 12rem;
+        width: 4rem;
         height: 2.5rem;
         align-content: center;
     }
