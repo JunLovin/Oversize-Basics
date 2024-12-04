@@ -14,6 +14,10 @@
     font-family: 'Poppins', serif;
 }
 
+.mobile {
+    display: none;
+}
+
 /* HEADER SECTION */
 
 .pc {
@@ -78,7 +82,7 @@
     border-radius: 2rem;
 }
 
-.container article .beige-shirt {
+.container article .shirtInCuestion-shirt {
     padding: 3rem 0 3rem 2rem;
     display: grid;
     grid-template-rows: 1fr;
@@ -88,7 +92,7 @@
     height: 100%;
 }
 
-.container article .beige-shirt img {
+.container article .shirtInCuestion-shirt img {
     width: 100%;
     height: 100%;
     border-radius: 2rem;
@@ -239,4 +243,218 @@
 
 .footer-pc a:hover {
     text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 480px) {
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    /* HEADER MOBILE SECTION */
+
+    .header-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 3.5rem;
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+
+    .header-mobile nav {
+        display: inline-block;
+        position: relative;
+    }
+
+    .header-mobile div {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .header-mobile div a {
+        color: var(--fg-main-color, #000);
+        text-decoration: none;
+    }
+
+    .header-mobile nav ul {
+        text-align: center;
+        display: inline-block;
+    }
+    
+    .header-mobile nav ul li {
+        padding: 0 1rem;
+        display: inline-block;
+    }
+    
+    .header-mobile nav ul li a {
+        color: var(--fg-main-color, #000);
+        text-decoration: none;
+    }
+
+    /* CONTAINER MOBILE SECTION */
+
+    .container-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 75rem;
+        background-image: url('../img/shirts-web/beige-bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .container-mobile article {
+        width: 90%;
+        height: 85%;
+        background-color: var(--bg-second-color, #fff);
+        border-radius: 2rem;
+    }
+
+    .container-mobile .shirtInCuestion-mobile-shirt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    .container-mobile .shirtInCuestion-mobile-shirt img {
+        border-radius: 2rem;
+        width: 90%;
+    }
+
+    .container-mobile .description-mobile {
+        padding: 0 2rem;
+    }
+
+    .container-mobile .description-mobile h2 {
+        font-size: 1.4rem;
+    }
+
+    .container-mobile .description-mobile h4 {
+        font-size: 1.1rem;
+    }
+
+    .container-mobile .description-mobile p {
+        font-size: .9rem;
+        line-height: 1.5;
+        letter-spacing: .02rem;
+    }
+
+    .container-mobile .buy-it-mobile {
+        text-align: center;
+        width: 100%;
+        margin-top: 1.8rem;
+    }
+
+    .container-mobile .buy-it-mobile a {
+        background-color: var(--bg-main-color, #000);
+        color :var(--fg-second-color, #fff);
+        padding: .8rem 1rem;
+        border-radius: 2rem;
+        transition: filter 100ms linear 50ms;
+    }
+
+    .container-mobile .buy-it-mobile a:hover {
+        filter: drop-shadow(var(--bg-main-color, #000) .3rem .3rem .3rem);
+    }
+
+    .container-mobile .buy-it-mobile a:active {
+        position: relative;
+        top: .2rem;
+    }
+
+    /* MORE SHIRTS MOBILE SECTION */
+
+    .more-shirts-mobile {
+        width: 100%;
+        margin: 2rem 0;
+        padding: 0 2rem;
+    }
+
+    .more-shirts-mobile h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .more-shirts-mobile article .tshirt-mobile-card {
+        width: 100%;
+        margin: 4rem 0;
+        text-align: center;
+        transition: transform 100ms linear 50ms;
+    }
+
+    .more-shirts-mobile article .tshirt-mobile-card:hover {
+        transform: scale(102%);
+    }
+
+    .more-shirts-mobile article .tshirt-mobile-card img {
+        width: 100%;
+        border-radius: 2rem;
+    }
+
+    .more-shirts-mobile article .tshirt-mobile-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn {
+        margin: .3rem auto;
+        background-color: var(--bg-main-color, #000);
+        border-radius: 120rem;
+        color: var(--fg-second-color, #fff);
+        width: 4rem;
+        height: 2.5rem;
+        align-content: center;
+        cursor: pointer;
+    }
+
+    .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn:hover {
+        filter: drop-shadow(var(--bg-main-color, #000) .3rem .3rem .3rem)
+    }
+
+    .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn:active {
+        position: relative;
+        top: .1rem;
+    }
+
+    .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn a {
+        color: var(--fg-second-color, #fff);
+        text-decoration: none;
+        padding: 0 .5rem;
+    }
+
+    .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn a:hover {
+        text-decoration: underline;
+    }
+
+    /* FOOTER MOBILE */
+
+    .footer-mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 3.5rem;
+        background-color: var(--bg-main-color, #000);
+    }
+    
+    .footer-mobile p {
+        color: var(--fg-footer-color, #aaa);
+        margin: 0 1rem;
+        padding: 0;
+        font-size: .8rem;
+    }
+
+    .footer-mobile p a {
+        color: var(--fg-footer-color, #aaa);
+        text-decoration: none;    }
 }
