@@ -205,8 +205,8 @@
     background-color: var(--bg-main-color, #000);
     color: var(--fg-second-color, #fff);
     text-decoration: none;
-    border-radius: 2rem;
-    padding: .5rem 1rem;
+    border-radius: 100%;
+    padding: .6rem .8rem;
     transition: filter 100ms linear 50ms;
 }
 
@@ -407,8 +407,7 @@
     }
 
     .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn {
-        margin: .3rem auto;
-        background-color: var(--bg-main-color, #000);
+        margin: .6rem auto;
         border-radius: 120rem;
         color: var(--fg-second-color, #fff);
         width: 4rem;
@@ -427,9 +426,11 @@
     }
 
     .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn a {
+        background-color: var(--bg-main-color, #000);
         color: var(--fg-second-color, #fff);
         text-decoration: none;
-        padding: 0 .5rem;
+        padding: .7rem 1rem;
+        border-radius: 100%;
     }
 
     .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn a:hover {

@@ -89,7 +89,7 @@
 
 .intro {
     display: flex;
-    padding: 3rem 8rem;
+    padding: 1rem 8rem;
 }
 
 .intro article {
@@ -100,8 +100,6 @@
     margin: 0 auto;
     /* background-color: #FFF6EC; */
     width: 72rem;
-    border-radius: 3rem;
-    border: .1rem solid var(--bg-main-color, #000);
 }
 
 .intro article div {
@@ -175,7 +173,7 @@
 
 .catalog {
     width: 100%;
-    padding: 2rem 0 8rem 0;
+    padding: 1rem 0 8rem 0;
 }
 
 .catalog h2 {
@@ -185,23 +183,22 @@
 }
 
 .catalog article {
-    width: 100%;
+    width: 80%;
     display: grid;
-    justify-content: center;
-    gap: 4rem 0rem;
+    margin: 0 auto;
+    gap: 2rem 1rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
 
 .catalog article .tshirt-card {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     padding: 2rem 0;
     cursor: pointer;
     /* background-color: #FFF6EC; */
     border-radius: 4rem;
-    border: .1rem solid var(--bg-main-color, #000);
 }
 
 .catalog article .tshirt-card a {
@@ -235,11 +232,11 @@
     background-color: var(--bg-main-color, #000);
     border-radius:  2rem;;
     width: 10rem;
-    height: 2rem;
+    height: 2.5rem;
     align-content: center;
     margin: 0 auto;
     transition: filter 100ms linear 50ms;
-    margin-top: .2rem;
+    margin-top: .6rem;
 }
 
 .catalog article .tshirt-card .buy-btn a:hover {
@@ -310,7 +307,7 @@
 .info article a img {
     border-radius: .5rem;
     width: 10rem;
-    transition: transform 50ms linear 50ms;
+    transition: transform 100ms linear 50ms;
 }
 
 .info article a img:hover {
@@ -481,10 +478,7 @@
     }
 
     .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn {
-        margin: .3rem auto;
-        background-color: var(--bg-main-color, #000);
-        border-radius: 120rem;
-        color: var(--fg-second-color, #fff);
+        margin: .6rem auto;
         width: 4rem;
         height: 2.5rem;
         align-content: center;
@@ -500,9 +494,11 @@
     }
 
     .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn a {
+        background-color: var(--bg-main-color, #000);
         color: var(--fg-second-color, #fff);
+        border-radius: 100%;
         text-decoration: none;
-        padding: 0 .5rem;
+        padding: .8rem 1rem;
     }
 
     .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn a:hover {
