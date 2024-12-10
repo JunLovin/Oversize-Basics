@@ -18,6 +18,14 @@
     display: none;
 }
 
+body {
+    transition: background-color 200ms linear 50ms, color 200ms linear 50ms;
+}
+
+#switch-bg {
+    cursor: pointer;
+}
+
 /* HEADER SECTION */
 
 .pc {
@@ -80,6 +88,7 @@
     height: 80%;
     background-color: var(--bg-second-color, #fff);
     border-radius: 2rem;
+    transition: background-color 200ms linear 50ms, color 200ms linear 50ms;
 }
 
 .container article .shirtInCuestion-shirt {
@@ -132,7 +141,7 @@
     color: var(--fg-second-color, #fff);
     text-decoration: none;
     background-color: var(--bg-main-color, #000);
-    transition: filter 100ms linear 50ms;
+    transition: filter 100ms linear 50ms, background-color 200ms linear 50ms, color 200ms linear 50ms;
 }
 
 .container article .buy-it a:hover {
@@ -243,6 +252,40 @@
 
 .footer-pc a:hover {
     text-decoration: underline;
+}
+
+/* DARK MODE */
+
+.dark {
+    background-color: #000000;
+    color: var(--fg-second-color, #fff);
+}
+
+.dark a {
+    color: var(--fg-second-color, #fff) !important;
+}
+
+.dark .container article {
+    background-color: var(--bg-main-color, #000);
+    color: var(--fg-second-color, #fff) !important;
+}
+
+.dark .container article .buy-it a {
+    color: var(--fg-main-color, #000) !important;
+    background-color: var(--bg-second-color, #fff);
+}
+
+.dark .container article .buy-it a:hover {
+    filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem);
+}
+
+.dark .more-shirts article .tshirt-card .cart-btn {
+    background-color: var(--bg-second-color, #fff);
+    color: var(--fg-main-color, #000) !important;
+}
+
+.more-shirts article .tshirt-card .cart-btn:hover {
+    filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem);
 }
 
 /* MEDIA QUERIES */
@@ -457,5 +500,45 @@
 
     .footer-mobile p a {
         color: var(--fg-footer-color, #aaa);
-        text-decoration: none;    }
+        text-decoration: none;    
+    }
+
+        /* DARK MODE */
+
+        .dark .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn:hover {
+            filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem)
+        }
+    
+        .dark .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn a {
+            background-color: var(--bg-second-color, #fff);
+            color: var(--fg-main-color, #000) !important;
+            border-radius: 100%;
+            text-decoration: none;
+            padding: .8rem 1rem;
+        }
+    
+        .dark .info-mobile {
+            width: 100%;
+            padding: 0 2rem;
+            background-color: var(--bg-second-color, #fff);
+            color: var(--fg-main-color, #000);
+        }
+    
+        .dark .intro-mobile article div a {
+            background-color: var(--bg-second-color, #fff);
+            color: var(--fg-main-color, #000) !important;
+            border-radius: 2rem;
+            padding: 1rem 3rem;
+            text-decoration: none;
+            transition: filter 100ms linear 50ms;
+        }
+    
+        .dark .intro-mobile article div a:hover {
+            filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem);
+        }
+    
+        .dark .info-mobile article p a {
+            color: var(--fg-main-color, #000) !important;
+            text-decoration: none;
+        }
 }

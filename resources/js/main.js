@@ -3,7 +3,6 @@ const template = Handlebars.compile(source)
 const switchBg = document.getElementById('switch-bg')
 const siwtchBgAndroid = document.getElementById('switch-bg-android')
 
-
 const context = {
     camisetasAndroid: [
         {
