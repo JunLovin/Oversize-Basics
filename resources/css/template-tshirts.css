@@ -361,6 +361,7 @@ body {
         height: 85%;
         background-color: var(--bg-second-color, #fff);
         border-radius: 2rem;
+        transition: background-color 200ms linear 50ms, color 200ms linear 50ms;
     }
 
     .container-mobile .shirtInCuestion-mobile-shirt {
@@ -404,7 +405,7 @@ body {
         color :var(--fg-second-color, #fff);
         padding: .8rem 1rem;
         border-radius: 2rem;
-        transition: filter 100ms linear 50ms;
+        transition: filter 100ms linear 50ms, background-color 200ms linear 50ms, color 200ms linear 50ms;
     }
 
     .container-mobile .buy-it-mobile a:hover {
@@ -457,6 +458,7 @@ body {
         height: 2.5rem;
         align-content: center;
         cursor: pointer;
+        transition: filter 100ms linear 50ms;
     }
 
     .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn:hover {
@@ -474,10 +476,6 @@ body {
         text-decoration: none;
         padding: .7rem 1rem;
         border-radius: 100%;
-    }
-
-    .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn a:hover {
-        text-decoration: underline;
     }
 
     /* FOOTER MOBILE */
@@ -505,40 +503,26 @@ body {
 
         /* DARK MODE */
 
-        .dark .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn:hover {
-            filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem)
+        .dark .container-mobile article {
+            background-color: var(--bg-main-color, #000);
+            color: var(--fg-second-color, #fff) !important;
         }
-    
-        .dark .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn a {
+
+        .dark .container-mobile .buy-it-mobile a {
             background-color: var(--bg-second-color, #fff);
-            color: var(--fg-main-color, #000) !important;
-            border-radius: 100%;
-            text-decoration: none;
-            padding: .8rem 1rem;
+            color :var(--fg-main-color, #000) !important;
         }
     
-        .dark .info-mobile {
-            width: 100%;
-            padding: 0 2rem;
-            background-color: var(--bg-second-color, #fff);
-            color: var(--fg-main-color, #000);
-        }
-    
-        .dark .intro-mobile article div a {
-            background-color: var(--bg-second-color, #fff);
-            color: var(--fg-main-color, #000) !important;
-            border-radius: 2rem;
-            padding: 1rem 3rem;
-            text-decoration: none;
-            transition: filter 100ms linear 50ms;
-        }
-    
-        .dark .intro-mobile article div a:hover {
+        .dark .container-mobile .buy-it-mobile a:hover {
             filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem);
         }
-    
-        .dark .info-mobile article p a {
+
+        .dark .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn a {
+            background-color: var(--bg-second-color, #fff);
             color: var(--fg-main-color, #000) !important;
-            text-decoration: none;
+        }
+
+        .dark .more-shirts-mobile article .tshirt-mobile-card .buy-mobile-btn:hover {
+            filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem)
         }
 }
