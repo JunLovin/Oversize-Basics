@@ -1,5 +1,8 @@
 const source = document.getElementById('shirts-template').innerHTML
 const template = Handlebars.compile(source)
+const switchBg = document.getElementById('switch-bg')
+const siwtchBgAndroid = document.getElementById('switch-bg-android')
+
 
 const context = {
     camisetasAndroid: [
@@ -63,3 +66,10 @@ const context = {
 const compiledHTML = template(context)
 const box = document.getElementById('mobile-shirts')
 box.innerHTML = compiledHTML
+
+const bodyDark = () => {
+    document.body.classList.toggle('dark')
+}
+
+switchBg.addEventListener('click', bodyDark)
+siwtchBgAndroid.addEventListener('click', bodyDark)

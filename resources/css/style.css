@@ -14,8 +14,16 @@
     font-family: 'Poppins', serif;
 }
 
+body {
+    transition: background-color 200ms linear 50ms, color 200ms linear 50ms;
+}
+
 .mobile {
     display: none;
+}
+
+#switch-bg {
+    cursor: pointer;
 }
 
 /* HEADER SECTION */
@@ -264,7 +272,6 @@
 .info article {
     text-align: center;
     color: var(--fg-second-color, #fff);
-    background-color: var(--bg-main-color, #000);
 }
 
 .info article h2 {
@@ -340,6 +347,70 @@
 
 .footer-pc p a:hover {
     text-decoration: underline;
+}
+
+/* DARK MODE */
+
+.dark {
+    background-color: #000000;
+    color: var(--fg-second-color, #fff);
+}
+
+.dark a {
+    color: var(--fg-second-color, #fff) !important;
+}
+
+.dark .intro article .mini-intro div a {
+    padding: .7rem 5rem;
+    border-radius: 3rem;
+    background-color: var(--bg-second-color, #fff);
+    color: var(--fg-main-color, #000) !important;
+    text-decoration: none;
+    transition: filter 100ms linear 50ms;
+}
+
+.dark .intro article .mini-intro div a:hover {
+    filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem);
+    border: none;
+}
+
+.dark .catalog article .tshirt-card .buy-btn {
+    background-color: var(--bg-second-color, #fff);
+    border-radius:  2rem;;
+    width: 10rem;
+    height: 2.5rem;
+    align-content: center;
+    margin: 0 auto;
+    transition: filter 100ms linear 50ms;
+    margin-top: .6rem;
+}
+
+.dark .catalog article .tshirt-card .buy-btn a {
+    color: var(--fg-main-color, #000) !important;
+}
+
+.dark .catalog article .tshirt-card .buy-btn:hover {
+    filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem)
+}
+
+.dark .info {
+    width: 100%;
+    margin: 0;
+    padding: 4rem 0;
+    background-color: var(--bg-second-color, #fff);
+}
+
+.dark .info article {
+    color: var(--fg-main-color, #000);
+}
+
+.dark .info article p a {
+    color: var(--fg-main-color, #000) !important;
+    text-decoration: none;
+}
+
+.dark .info article div i {
+    color: var(--fg-second-color, #fff);
 }
 
 /* MEDIA QUERIES */
@@ -505,6 +576,45 @@
         text-decoration: underline;
     }
 
+    /* DARK MODE */
+
+    .dark .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn:hover {
+        filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem)
+    }
+
+    .dark .catalog-mobile article .tshirt-mobile-card .buy-mobile-btn a {
+        background-color: var(--bg-second-color, #fff);
+        color: var(--fg-main-color, #000) !important;
+        border-radius: 100%;
+        text-decoration: none;
+        padding: .8rem 1rem;
+    }
+
+    .dark .info-mobile {
+        width: 100%;
+        padding: 0 2rem;
+        background-color: var(--bg-second-color, #fff);
+        color: var(--fg-main-color, #000);
+    }
+
+    .dark .intro-mobile article div a {
+        background-color: var(--bg-second-color, #fff);
+        color: var(--fg-main-color, #000) !important;
+        border-radius: 2rem;
+        padding: 1rem 3rem;
+        text-decoration: none;
+        transition: filter 100ms linear 50ms;
+    }
+
+    .dark .intro-mobile article div a:hover {
+        filter: drop-shadow(var(--bg-second-color, #fff) .3rem .3rem .3rem);
+    }
+
+    .dark .info-mobile article p a {
+        color: var(--fg-main-color, #000) !important;
+        text-decoration: none;
+    }
+
     /* INFO MOBILE SECTION */
 
     .info-mobile {
@@ -535,6 +645,7 @@
         height: 2rem;
         border-radius: 2rem;
         margin: 1rem 0;
+        padding: 0 1rem;
     }
 
     .info-mobile div input::placeholder {
