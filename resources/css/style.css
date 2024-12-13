@@ -287,23 +287,28 @@ body {
 
 .info article div i {
     position: relative;
-    right: 1.5rem;
+    right: 2rem;
+    top: .1rem;
     cursor: pointer;
+    color: var(--fg-main-color, #000);
 }
 
 .info article div input {
     width: 20rem;
     height: 2rem;
-    padding: 1rem;
     background-color: var(--bg-main-color, #000);
     border: none;
-    border-radius: .5rem;
+    border-radius: 5rem;
+    width: 25%;
+    height: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--fg-second-color, #fff);
+    padding: 1rem;
+    color: var(--fg-main-color, #000);
+    background-color: var(--bg-second-color, #fff);
 }
 
 .info article div input::placeholder {
-    color: var(--fg-second-color, #fff);
+    color: var(--fg-main-color, #000);
 }
 
 .info article p a {
